@@ -3,7 +3,7 @@ class UploadsController < ApplicationController
   end
 
   def create
-    puts "este es el bucket", S3_BUCKET.name
+    # puts "este es el bucket", S3_BUCKET.name
     # puts params[:file].instance_variables
     file_path = params[:file].tempfile.path
     
