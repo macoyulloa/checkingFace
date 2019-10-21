@@ -2,5 +2,9 @@
 
 <%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
 	<%= file_field_tag :file  %>
+    <div>
+        <%= label_tag "Email"%>
+        <%= email_field_tag :email %>
+    </div>
 	<%= submit_tag 'Upload file' %>
 <% end %>
