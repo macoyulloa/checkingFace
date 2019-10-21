@@ -3,8 +3,13 @@ class UploadsController < ApplicationController
   end
 
   def create
-    obj = S3_BUCKET.objects[params[:file].original_filename]
-    obj.write(file: params[:file], acl: :public_read)
+    # puts "este es el bucket", S3_BUCKET.name
+    # puts params[:file].instance_variables
+    file_path = params[:file].tempfile.path
+    
+    obj = S3_BUCKET.object(params[:file].original_filename)
+    obj.upload_file(file_path, { acl: 'public-read' })
+    # obj.write(file: params[:file], acl: :public_read)
     @upload = Upload.new(url: obj.public_url, name: obj.key)
 
     if @upload.save
@@ -16,5 +21,6 @@ class UploadsController < ApplicationController
   end
 
   def index
+    @uploads = Upload.all
   end
 end
