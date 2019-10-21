@@ -24,6 +24,10 @@ class ApplicationController < ActionController::API
     @current_user_id.present?
   end
 
+  def update_user_email(upload)
+    user = User.find_by(email: upload.email)
+    user.update(image_url: upload.url)
+  end
 
   private
 
