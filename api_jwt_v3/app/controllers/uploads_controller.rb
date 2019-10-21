@@ -10,9 +10,12 @@ class UploadsController < ApplicationController
     obj = S3_BUCKET.object(params[:file].original_filename)
     obj.upload_file(file_path, { acl: 'public-read' })
     # obj.write(file: params[:file], acl: :public_read)
-    @upload = Upload.new(url: obj.public_url, name: obj.key)
+    @upload = Upload.new(url: obj.public_url, name: obj.key, email: params[:email])
 
     if @upload.save
+      #user = User.find_by(email: @upload.email)
+      #user.update(image_url: @upload.url)
+      update_user_email(@upload)
       redirect_to uploads_path, succes: 'File successfully uploaded'  
     else
       flash.now[:info] = 'There was an error'
