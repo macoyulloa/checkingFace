@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     devise_for :users, controllers: { sessions: :sessions },
               path_names: { sign_in: :login }
 
-    resource :user, only: [:show, :update]
+    resource :user, only: [:show, :update, :destroy]
     get "/all", to: "users#index"
   end
   resources :uploads
