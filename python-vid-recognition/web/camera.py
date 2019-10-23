@@ -1,5 +1,8 @@
 import face_recognition
 import cv2
+from requests import get
+import numpy as np
+from skimage import io
 import zlib
 
 
@@ -8,14 +11,24 @@ class VideoCamera(object):
         self.video_capture = cv2.VideoCapture(0)
         # Create arrays of known face encodings and their names
         # Load a sample picture and learn how to recognize it.
-        image = face_recognition.load_image_file("./data-images/andres.png")
-        face_encoding = face_recognition.face_encodings(image)[0]
-        self.known_face_encodings = [
-            face_encoding
-        ]
-        self.known_face_names = [
-            "Andres"
-        ]
+        # Create arrays of known face encodings and their names
+        self.known_face_encodings = []
+        self.known_face_names = []
+
+        # Load a sample picture and learn how to recognize it.
+        images = []
+        # Getting the images from the appi
+        response = get('https://api-jwt-v3.herokuapp.com/api/all').json()
+        for each in response:
+            images.append(each['image_url'])
+        # Saving the images in a numpy format, array
+        for each_url_image in images:
+            img = io.imread(each_url_image)
+            face_encoding = face_recognition.face_encodings(img)[0]
+            self.known_face_encodings.append(face_encoding)
+        # Saving the names of the known people
+        for each in response:
+            self.known_face_names.append(each['name'])  
 
     def __del__(self):
         self.video.release()
