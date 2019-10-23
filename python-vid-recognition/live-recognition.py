@@ -25,7 +25,6 @@ for each in response:
 # Saving the images in a numpy format, array
 for each_url_image in images:
     img = io.imread(each_url_image)
-    #image = face_recognition.load_image_file(img)
     face_encoding = face_recognition.face_encodings(img)[0]
     known_face_encodings.append(face_encoding)
 
