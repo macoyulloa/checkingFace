@@ -17,6 +17,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        current_user.destroy
+        render json: { user: 'deleted' }, status: 200
+    end
+
     private
 
     def user_params
