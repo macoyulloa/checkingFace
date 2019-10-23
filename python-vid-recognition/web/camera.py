@@ -1,38 +1,28 @@
 import face_recognition
 import cv2
-import numpy as np
-import io
-import socket
-import struct
-import time
-import pickle
 import zlib
 
 
 class VideoCamera(object):
     def __init__(self):
         self.video_capture = cv2.VideoCapture(0)
+        # Create arrays of known face encodings and their names
+        # Load a sample picture and learn how to recognize it.
+        image = face_recognition.load_image_file("./data-images/andres.png")
+        face_encoding = face_recognition.face_encodings(image)[0]
+        self.known_face_encodings = [
+            face_encoding
+        ]
+        self.known_face_names = [
+            "Andres"
+        ]
 
     def __del__(self):
         self.video.release()
 
     def get_frame(self):
-        # Load a sample picture and learn how to recognize it.
-        image = face_recognition.load_image_file("./data-images/andres.png")
-        face_encoding = face_recognition.face_encodings(image)[0]
-
-        # Create arrays of known face encodings and their names
-        known_face_encodings = [
-            face_encoding
-        ]
-        known_face_names = [
-            "Andres"
-        ]
 
         # Initialize some variables
-        face_locations = []
-        face_encodings = []
-        face_names = []
         process_this_frame = True
 
         # Grab a single frame of video
@@ -57,15 +47,12 @@ class VideoCamera(object):
             for face_encoding in face_encodings:
                 # See if the face is a match for the known face(s)
                 matches = face_recognition.compare_faces(
-                    known_face_encodings, face_encoding, tolerance=0.5)
+                    self.known_face_encodings, face_encoding, tolerance=0.5)
                 name = "Unknown"
 
-                # new face
-                face_distances = face_recognition.face_distance(
-                    known_face_encodings, face_encoding)
-                best_match_index = np.argmin(face_distances)
-                if matches[best_match_index]:
-                    name = known_face_names[best_match_index]
+                if True in matches:
+                    first_match_index = matches.index(True)
+                    name = self.known_face_names[first_match_index]
 
                 face_names.append(name)
 
