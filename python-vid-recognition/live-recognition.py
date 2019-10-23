@@ -1,24 +1,37 @@
 import face_recognition
 import cv2
 import numpy as np
+from requests import get
+from skimage import io
+from PIL import Image
 
 # demos that don't require it instead.
 
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
-image = face_recognition.load_image_file("./data-images/andres.png")
-face_encoding = face_recognition.face_encodings(image)[0]
-
-
 # Create arrays of known face encodings and their names
-known_face_encodings = [
-    face_encoding
-]
-known_face_names = [
-    "Andres"
-]
+known_face_encodings = []
+known_face_names = []
+
+# Load a sample picture and learn how to recognize it.
+images = []
+
+# Getting the images from the appi
+response = get('https://api-jwt-v3.herokuapp.com/api/all').json()
+for each in response:
+    images.append(each['image_url'])
+
+# Saving the images in a numpy format, array
+for each_url_image in images:
+    img = io.imread(each_url_image)
+    #image = face_recognition.load_image_file(img)
+    face_encoding = face_recognition.face_encodings(img)[0]
+    known_face_encodings.append(face_encoding)
+
+# Saving the names of the known people
+for each in response:
+    known_face_names.append(each['name'])
 
 # Initialize some variables
 face_locations = []
