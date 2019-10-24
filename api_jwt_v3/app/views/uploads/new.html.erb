@@ -1,10 +1,27 @@
-<h1>Upload a file</h1>
-
-<%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
-	<%= file_field_tag :file  %>
-    <div>
-        <%= label_tag "Email"%>
-        <%= email_field_tag :email %>
-    </div>
-	<%= submit_tag 'Upload file' %>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body style="background-color: #95a3a5;">
+      <div class="container" >
+        <div class="row">
+          <div class="col-sm-12 offset-sm-3">
+            <h1 class="mt-5" style="color: #fff">Upload a file</h1>
+            <form class="mt-5">
+              <%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
+                <div class="form-group">
+                  <%= file_field_tag :file, style: 'color: #fff;', class: 'btn'  %>
+                  <%= label_tag "Email" %>
+                  <%= email_field_tag :email %>
+                  <%= submit_tag 'Upload file', style: '', class: 'btn btn-info' %>
+                </div>
+              <% end %>
+            </form>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

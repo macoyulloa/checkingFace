@@ -16,7 +16,7 @@ class UploadsController < ApplicationController
       #user = User.find_by(email: @upload.email)
       #user.update(image_url: @upload.url)
       update_user_email(@upload)
-      redirect_to uploads_path, succes: 'File successfully uploaded'  
+      redirect_to root_path, succes: 'File successfully uploaded'  
     else
       flash.now[:info] = 'There was an error'
       render :new
