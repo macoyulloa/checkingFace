@@ -7,7 +7,9 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  email      :string
 #
 
 class Upload < ApplicationRecord
+    validates_presence_of :email
 end
