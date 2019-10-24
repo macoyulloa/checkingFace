@@ -20,6 +20,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates_presence_of :email, :password, :name
+  
   def generate_jwt
     JWT.encode({ id: id,
                 exp: 60.days.from_now.to_i },
