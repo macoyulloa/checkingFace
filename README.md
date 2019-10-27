@@ -21,7 +21,6 @@ $ sudo apt install python3-opencv
 ```
 
 ## API - Database Engine Storage
-================================
 
 The API was made in ruby raiuls with authentication JWT and it has the function of manage the registers of the users. The API interact with the DataBase, coded in PostgreSQL. 
 
@@ -37,7 +36,6 @@ https://api-jwt-v3.herokuapp.com/api/users/login POST, to log in a user with pas
 4. https://api-jwt-v3.herokuapp.com/api/all, GET returns all users in database, this is a public endpoint
 
 ## Face Recognition Model
-=========================
 
 The face_recognition model recognize and manipulate faces from Python or from the command line with the world's simplest face recognition library. This also provides a simple `face_recognition` command line tool that lets you do face recognition on a folder of images from the command line!
 
