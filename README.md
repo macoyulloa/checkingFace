@@ -26,14 +26,25 @@ The API was made in ruby raiuls with authentication JWT and it has the function 
 
 The endpoints are:
 
-1. https://api-jwt-v3.herokuapp.com/api/users POST allows creating a new user .  
-https://api-jwt-v3.herokuapp.com/api/users/login POST, to log in a user with password and email, and returns a JWT token to retrieve the user info in JSON
+1. Private route: https://api-jwt-v3.herokuapp.com/api/users. 
+    Method: POST
+    Porpose: create a new user.  
 
-2. https://api-jwt-v3.herokuapp.com/api/user, GET show a user, you must send in Authorization Header a Bearer token
+2. Private Route: https://api-jwt-v3.herokuapp.com/api/users/login 
+    Method: POST
+    Porpose: loging in a user with password and email, and returns a JWT token to retrieve the user info in JSON
 
-3. https://api-jwt-v3.herokuapp.com/api/user, PATCH or PUT, you must send in Authorization Header a Bearer token
+3. Private Route: https://api-jwt-v3.herokuapp.com/api/user 
+    Method: GET
+    Porpose: show a user, you must send in Authorization Header a Bearer token
 
-4. https://api-jwt-v3.herokuapp.com/api/all, GET returns all users in database, this is a public endpoint
+4. Private Route: https://api-jwt-v3.herokuapp.com/api/user
+    Method: PATCH or PUT
+    Porpose: to change a user or updatings. You must send in Authorization Header a Bearer token
+
+5. Public Route: https://api-jwt-v3.herokuapp.com/api/all
+    Method: GET
+    Porpose: returns all users in database.
 
 ## Face Recognition Model
 
@@ -132,6 +143,19 @@ It prints one line for each face that was detected. The coordinates reported are
 
 #### WEB real-time Face Recognition:
 
+After to install all the progams neaded, to get started with the WEB real-time Face Recognition, it is necesary to go to the web directory:
+
+```
+$ checkingFace/python-vid-recognition/web/
+```
+Once there, run the main.py file, which is an app build in Flask:
+```
+$ python3 main.py
+```
+As soons as, the main.py file is runed, make sure the port active, go directly to the browser and type the localhost IP using the port active, for example: 
+```
+localhost:5000
+```
 
 
 Authors
