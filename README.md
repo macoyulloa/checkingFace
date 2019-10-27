@@ -22,29 +22,29 @@ $ sudo apt install python3-opencv
 
 ## API - Database Engine Storage
 
-The API was made in ruby raiuls with authentication JWT and it has the function of manage the registers of the users. The API interact with the DataBase, coded in PostgreSQL. 
+The API was made in ruby on rails with authentication JWT and it has the function of manage the registers of the users. The API interact with the DataBase, coded in PostgreSQL. 
 
 The endpoints are:
 
 1. Private route: https://api-jwt-v3.herokuapp.com/api/users. 
-    Method: POST
-    Porpose: create a new user.  
+Method: POST
+Porpose: create a new user.  
 
 2. Private Route: https://api-jwt-v3.herokuapp.com/api/users/login 
-    Method: POST
-    Porpose: loging in a user with password and email, and returns a JWT token to retrieve the user info in JSON
+Method: POST
+Porpose: loging in a user with password and email, and returns a JWT token to retrieve the user info in JSON
 
 3. Private Route: https://api-jwt-v3.herokuapp.com/api/user 
-    Method: GET
-    Porpose: show a user, you must send in Authorization Header a Bearer token
+Method: GET
+Porpose: show a user, you must send in Authorization Header a Bearer token
 
 4. Private Route: https://api-jwt-v3.herokuapp.com/api/user
-    Method: PATCH or PUT
-    Porpose: to change a user or updatings. You must send in Authorization Header a Bearer token
+Method: PATCH or PUT
+Porpose: to change a user or updatings. You must send in Authorization Header a Bearer token
 
 5. Public Route: https://api-jwt-v3.herokuapp.com/api/all
-    Method: GET
-    Porpose: returns all users in database.
+Method: GET
+Porpose: returns all users in database.
 
 ## Face Recognition Model
 
