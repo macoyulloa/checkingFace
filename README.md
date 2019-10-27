@@ -35,7 +35,8 @@ Porpose: create a new user
 2. Private Route: https://api-jwt-v3.herokuapp.com/api/users/login:
 ```
 Method: POST
-Porpose: loging in a user with password and email, and returns a JWT token to retrieve the user info in JSON
+Porpose: loging in a user with password and email
+Returns a JWT token to retrieve the user info in JSON
 ```
 
 3. Private Route: https://api-jwt-v3.herokuapp.com/api/user:
@@ -59,6 +60,24 @@ Porpose: returns all users in database.
 ## Face Recognition Model
 
 The face_recognition model recognize and manipulate faces from Python or from the command line with the world's simplest face recognition library. This also provides a simple `face_recognition` command line tool that lets you do face recognition on a folder of images from the command line!
+
+The Face Model is organized as two models:
+
+1. Python-pic-recognition: 
+```
+In the python picture recognition directory there are 3 features: 
+    a. Finding faces
+    b. Identifing faces
+    c. Pulling faces based on a group of people image. 
+```
+
+2. Python-vid-recognition:
+```
+In the python video recognition directory there are 3 features:
+    a. live recognition: need to be execute in the console
+    b. streaming directory: streaming video feature using the router config
+    c. web directory: to face recognized thought the web (localhost IP)
+```
 
 ### Features
 
