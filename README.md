@@ -59,6 +59,12 @@ Method: GET
 Porpose: returns all users in database.
 ```
 
+6. Route to uploading the picture of each profile: https://api-jwt-v3.herokuapp.com/
+```
+https://api-jwt-v3.herokuapp.com/
+With the email already registed select the picture and send it to the database
+```
+
 ## Face Recognition Model
 
 The face_recognition model recognize and manipulate faces from Python or from the command line with the world's simplest face recognition library. This also provides a simple `face_recognition` command line tool that lets you do face recognition on a folder of images from the command line!
