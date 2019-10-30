@@ -198,6 +198,6 @@ localhost:5000
 Authors
 -------
 
--   **Martin Peña** - [] (<https://github.com/>)
--   **Andres Lopez** - [] (<https://github.com/>)
+-   **Martin Peña** - [andres-martin] (<https://github.com/andres-martin>)
+-   **Andres Lopez** - [klupzor] (<https://github.com/klupzor>)
 -   **Maria Alejandra Coy** - [macoyulloa] (<https://github.com/macoyulloa>)
