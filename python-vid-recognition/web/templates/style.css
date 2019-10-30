@@ -1,0 +1,39 @@
+body {
+    color: #F5E2C6;
+    font-family: 'Fredoka One', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    margin: 0;
+    height: 100vh;
+}
+
+.left-container{
+    background: #20242A;
+}
+
+.rigth-container {
+    background: #2B3038;
+}
+
+
+h1 {
+    margin: 0;
+    padding-top: 15vh;
+    font-size: 70px;
+    padding-left: 10%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.font-names {
+    color: rgba(32, 36, 42, 0.8);
+    font-size: 120px;
+    opacity: 0.9;
+    padding-left: 45%;
+    padding-top: 20%;
+}
