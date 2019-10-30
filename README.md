@@ -4,6 +4,8 @@ CheckingFace does the verification of the identity to allow or refuses the acces
 
 The propose is to give access to people who are previously registered in the DataBase CheckingFace, was done using PostgreSQL, and identity verification for people, main library used was face_recognition, who wants to enter a building, our database will be local, and just are taking into account the software solution. 
 
+![faceRecordGif](faceRecord.gif)
+
 ## Bulding the Enviroment
 
 First, make sure you have dlib already installed with Python bindings.
