@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CheckingFace</title>
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <div class="left-container">
@@ -18,7 +18,7 @@
 
   </div>
   <div class="video-container">
-    <!-- <img src="{{ url_for('video_feed') }}"> -->
+    <img src="{{ url_for('video_feed') }}"/>
   </div>
 </body>
 </html>
