@@ -8,7 +8,9 @@ from PIL import Image
 # demos that don't require it instead.
 
 # Get a reference to webcam #0 (the default one)
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
 video_capture = cv2.VideoCapture(0)
+out = cv2.VideoWriter('output.avi', fourcc, 10, (640, 480))
 
 # Create arrays of known face encodings and their names
 known_face_encodings = []
@@ -94,6 +96,10 @@ while True:
         cv2.putText(frame, name, (left + 6, bottom - 6),
                     font, 1.0, (255, 255, 255), 1)
 
+    # write the flippet frame
+    # flip = cv2.flip(frame, 0)
+    out.write(frame)
+
     # Display the resulting image
     cv2.imshow('Video', frame)
 
@@ -103,4 +109,5 @@ while True:
 
 # Release handle to the webcam
 video_capture.release()
+out.release()
 cv2.destroyAllWindows()
