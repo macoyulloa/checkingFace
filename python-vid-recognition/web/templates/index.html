@@ -2,7 +2,22 @@
 <html>
   <head>
     <title>CheckingFace</title>
-    <link rel = "stylesheet" href = "styles/style.css">
+    <style>
+      header {
+    color: white;
+    letter-spacing: 3px;
+    background-color: rgba(47, 60, 75, 0.925);
+    height: 60px;
+    width:100%;
+    text-align: center;
+    top: 0;}
+
+      .container {
+    max-width: 600px;
+    margin: 30px auto;
+    align-items: center;
+}
+    </style>
   </head>
   <body>
     <header>
@@ -11,11 +26,5 @@
     <div class="container">
       <img src="{{ url_for('video_feed') }}">
     </div>
-    <footer>
-      AUTHORS
-      Andres Martin Peña
-      Andres Lopez
-      Maria Alejandra Coy
-    </footer>
   </body>
 </html>
