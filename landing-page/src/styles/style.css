@@ -70,3 +70,18 @@ header div {
     display: table;
     color: white;
 }
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+}
+
+.about h1 {
+    grid-column: 2 / span 1;
+}
+
+.members {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
