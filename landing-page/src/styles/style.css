@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background: #20242A;
+    color: #F5E2C6;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    font-weight: 5;
+}
+
+header {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background: rgba(43, 48, 56, .9);
+    display: grid;
+    grid-template-columns: 20% 50% 1fr 1fr 1fr 20%;
+    grid-column-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    opacity: 0.9;
+    border-bottom: solid 1px white;
+}
+
+header div {
+    align-self: center;
+    cursor: pointer;
+
+}
+.icon {
+    color: #ff662b;
+    font-size: 50px;
+}
+ .logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    padding: 1px 0;
+    justify-self: start;
+ }
+
+
+ .intro {
+    background-image: url('../images/font-image.jpg');
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-rows: 15vw 1fr;
+
+}
+
+.intro p {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding: 0 20px;
+}
