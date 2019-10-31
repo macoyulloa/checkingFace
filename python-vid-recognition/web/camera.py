@@ -31,7 +31,7 @@ class VideoCamera(object):
             self.known_face_names.append(each['name'])  
 
     def __del__(self):
-        self.video.release()
+        self.video_capture.release()
 
     def get_frame(self):
 

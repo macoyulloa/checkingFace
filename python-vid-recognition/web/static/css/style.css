@@ -34,10 +34,10 @@ h1 {
     color: rgba(32, 36, 42, 0.8);
     display: flex;
     flex-direction: column;
-    font-size: 15rem;
+    font-size: 12vw;
     opacity: 0.9;
     padding-left: 5%;
-    padding-top: 5%;
+    padding-top: 8vh;
     align-items: end;
 }
 
