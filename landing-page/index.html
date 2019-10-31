@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis%7CFredoka+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/style.css">
     <title>Checking Face</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,6 +25,24 @@
                 and identity verification for people, main library used was face_recognition, who wants to enter a building, our database will be local, 
                 and just are taking into account the software solution.
         </p>
+        <div class="button">
+            <a href="https://github.com/macoyulloa/checkingFace" target="_blank" >Go to the Project</a>
+        </div>
     </div>
+    <div class="about">
+        <h1>About</h1>
+        <div><h2>Martin Peña</h2><a href="https://github.com/andres-martin">andres-martin</a></div>
+        <div><h2>Andres Lopez</h2><a href="https://github.com/klupzor">klupzor</a></div>
+        <div><h2>Maria Alejandra Coy</h2><a href="https://github.com/macoyulloa">macoyulloa</a></div>
+    </div>
+    <div class="login">
+        <form action="https://api-jwt-v3.herokuapp.com" id="myForm">
+            Name <input type="text" name="name" required>
+            Email <input type="text" name="email" required>
+            Password <input type="password" name="password" required>
+            <input type="submit" onclick="sendData()" value="Submit form">
+        </form>
+    </div>
+<script src="./src/javaScript.js"></script>
 </body>
 </html>

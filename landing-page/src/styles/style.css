@@ -44,7 +44,7 @@ header div {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 50% 1fr;
-    grid-template-rows: 15vw 1fr;
+    grid-template-rows: 15vw 40% 1fr;
 
 }
 
@@ -52,4 +52,21 @@ header div {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     padding: 0 20px;
+}
+
+.button {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    background: #ff662b;
+    width: 150px;
+    height: 30px;
+    border-radius: 28px;
+    justify-self: center;
+}
+.button a {
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    color: white;
 }
