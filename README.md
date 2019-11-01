@@ -128,6 +128,8 @@ results = face_recognition.compare_faces([biden_encoding], unknown_encoding)
 ### Finding face in REAL-TIME
 -----------------------------
 
+This feature has the ability to automatically recognize, thought the camera of the PC in the web browser, human faces based on dynamic facial images. This feature could be a security implemented and included in the access control to secure environments, identification of individuals at a particular place and intruder detection. This project proposes a real-time system for surveillance using cameras. The process is broken into two steps: (1) face detection and (2) face recognition to identify a registered people. For the first step, the system tracks and selects the faces with a label and name of the detected people. An efficient recognition algorithm is then used to recognize detected faces with a known database.
+
 You can even use this library with other Python libraries to do real-time face recognition:
 
 #### Requirements
