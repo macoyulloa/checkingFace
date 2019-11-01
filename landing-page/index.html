@@ -13,9 +13,9 @@
     <header>
         <div></div>
         <div class="logo"><b class="icon">C</b>hecking Face</div>
-        <div>Feature</div>
-        <div>About</div>
-        <div>Register</div>
+        <div> <a href="#feature">Feature</a></div>
+        <div><a href="#about">About</a></div>
+        <div><a href="#register">Register</a></div>
         <div></div>
     </header>
     <div class="intro">
@@ -29,7 +29,19 @@
             <a href="https://github.com/macoyulloa/checkingFace" target="_blank" >Go to the Project</a>
         </div>
     </div>
-    <div class="about">
+    <div class="feature" id="feature">
+        <h1>Finding face in REAL-TIME</h1>
+        <p>
+                This feature has the ability to automatically recognize, thought the camera of the PC in the web browser, human faces based on dynamic facial images. 
+                This feature could be a security implemented and included in the access control to secure environments, 
+                identification of individuals at a particular place and intruder detection. This project proposes a real-time system for surveillance using cameras. 
+                The process is broken into two steps: (1) face detection and (2) face recognition to identify a registered people. For the first step, 
+                the system tracks and selects the faces with a label and name of the detected people. 
+                An efficient recognition algorithm is then used to recognize detected faces with a known database.
+        </p>
+        <img src="https://github.com/macoyulloa/checkingFace/raw/master/faceRecord.gif" alt="check-image">
+    </div>
+    <div class="about" id="about">
         <h1>About</h1>
         <div class="members">
             <div><h2>Martin Peña</h2><a href="https://github.com/andres-martin">andres-martin</a></div>
@@ -37,15 +49,8 @@
             <div><h2>Maria Alejandra Coy</h2><a href="https://github.com/macoyulloa">macoyulloa</a></div>
         </div>
     </div>
-    <!-- <div class="login">
-        <form action="https://api-jwt-v3.herokuapp.com" id="myForm">
-            Name <input type="text" name="name" required>
-            Email <input type="email" name="email" required>
-            Password <input type="password" name="password" required>
-            <input type="submit" onclick="sendData()" value="Submit User">
-        </form>
-    </div> -->
-    <div class="signupSection">
+
+    <div class="signupSection" id="register">
         <div class="info">
             <h2>Add new user</h2>
             <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>

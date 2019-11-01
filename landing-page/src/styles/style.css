@@ -7,6 +7,7 @@ body {
     font-weight: 5;
 }
 
+
 header {
     z-index: 2;
     position: absolute;
@@ -25,6 +26,11 @@ header {
 header div {
     align-self: center;
     cursor: pointer;
+
+}
+header div a {
+    text-decoration: none;
+    color: #F5E2C6;
 
 }
 .icon {
@@ -63,21 +69,82 @@ header div {
     border-radius: 28px;
     justify-self: center;
 }
+
 .button a {
     text-decoration: none;
-    text-align: center;
-    margin: 0 auto;
-    display: table;
-    color: white;
+    color: #ff662b;
+}
+.button {
+    position: relative;
+    background: none;
+    color: aqua;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.2em solid aqua;
+    padding: 0.5em 1em;
+  }
+  .button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #222;
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .button:hover::before {
+    right: 80%;
+  }
+  .button:hover::after {
+    left: 80%;
+  }
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
 }
 
+.feature h1 {
+    grid-column: 2 / span 1;
+}
+
+.feature p {
+    grid-column: 2 / span 1;
+}
+
+.feature img {
+    grid-column: 2 / span 1;
+    justify-self: center;
+}
 .about {
+    background-image: url('../images/font-about.jpg');
     display: grid;
     grid-template-columns: 1fr 50% 1fr;
 }
 
 .about h1 {
     grid-column: 2 / span 1;
+}
+.about a {
+    text-decoration: none;
+    color: white;
 }
 
 .members {
