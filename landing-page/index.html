@@ -37,14 +37,38 @@
             <div><h2>Maria Alejandra Coy</h2><a href="https://github.com/macoyulloa">macoyulloa</a></div>
         </div>
     </div>
-    <div class="login">
+    <!-- <div class="login">
         <form action="https://api-jwt-v3.herokuapp.com" id="myForm">
             Name <input type="text" name="name" required>
-            Email <input type="text" name="email" required>
+            Email <input type="email" name="email" required>
             Password <input type="password" name="password" required>
-            <input type="submit" onclick="sendData()" value="Submit form">
+            <input type="submit" onclick="sendData()" value="Submit User">
+        </form>
+    </div> -->
+    <div class="signupSection">
+        <div class="info">
+            <h2>Add new user</h2>
+            <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+            <p>The Future Is Here</p>
+        </div>
+        <form class="signupForm" method="POST" action="">
+            <h2>Sign Up</h2>
+            <ul class="noBullet">
+            <li>
+                <input type="text" class="inputFields" name="name" placeholder="Username" required/>
+            </li>
+            <li>
+                <input type="password" class="inputFields" name="password" placeholder="Password" required/>
+            </li>
+            <li>
+                <input type="email" class="inputFields" name="email" placeholder="Email" required/>
+            </li>
+            <li id="center-btn">
+                <input id="join-btn" value="Submit User" onclick="sendData()">
+            </li>
+            </ul>
         </form>
     </div>
-<script src="./src/javaScript.js"></script>
+    <script src="./src/javaScript.js"></script>
 </body>
 </html>

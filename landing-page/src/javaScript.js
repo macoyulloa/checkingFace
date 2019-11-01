@@ -1,4 +1,3 @@
-const myForm = document.getElementById('myForm');
 
 function sendData(){
     var dataArray = $("form").serializeArray();
