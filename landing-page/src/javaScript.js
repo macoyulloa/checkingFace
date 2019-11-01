@@ -11,5 +11,7 @@ function sendData(){
         headers: {'Content-Type':'application/json'}, method: "POST",
         url: "https://api-jwt-v3.herokuapp.com/api/users",
         data: JSON.stringify({ user: data})
+       }).done(function (){
+        window.open("https://api-jwt-v3.herokuapp.com","_self")
        })
 }
