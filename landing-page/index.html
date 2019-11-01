@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,7 @@
     <title>Checking Face</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body>
     <header>
         <div></div>
@@ -20,33 +23,45 @@
     </header>
     <div class="intro">
         <p>
-                CheckingFace does the verification of the identity to allow or refuses the access of the people linked to a specific place.
-                The propose is to give access to people who are previously registered in the DataBase CheckingFace, was done using PostgreSQL, 
-                and identity verification for people, main library used was face_recognition, who wants to enter a building, our database will be local, 
-                and just are taking into account the software solution.
+            CheckingFace does the verification of the identity to allow or refuses the access of the people linked to a
+            specific place.
+            The propose is to give access to people who are previously registered in the DataBase CheckingFace, was done
+            using PostgreSQL,
+            and identity verification for people, main library used was face_recognition, who wants to enter a building,
+            our database will be local,
+            and just are taking into account the software solution.
         </p>
         <div class="button">
-            <a href="https://github.com/macoyulloa/checkingFace" target="_blank" >Go to the Project</a>
+            <a href="https://github.com/macoyulloa/checkingFace" target="_blank">Go to the Project</a>
         </div>
     </div>
     <div class="feature" id="feature">
         <h1>Finding face in REAL-TIME</h1>
         <p>
-                This feature has the ability to automatically recognize, thought the camera of the PC in the web browser, human faces based on dynamic facial images. 
-                This feature could be a security implemented and included in the access control to secure environments, 
-                identification of individuals at a particular place and intruder detection. This project proposes a real-time system for surveillance using cameras. 
-                The process is broken into two steps: (1) face detection and (2) face recognition to identify a registered people. For the first step, 
-                the system tracks and selects the faces with a label and name of the detected people. 
-                An efficient recognition algorithm is then used to recognize detected faces with a known database.
+            This feature has the ability to automatically recognize, thought the camera of the PC in the web browser,
+            human faces based on dynamic facial images.
+            This feature could be a security implemented and included in the access control to secure environments,
+            identification of individuals at a particular place and intruder detection. This project proposes a
+            real-time system for surveillance using cameras.
+            The process is broken into two steps: (1) face detection and (2) face recognition to identify a registered
+            people. For the first step,
+            the system tracks and selects the faces with a label and name of the detected people.
+            An efficient recognition algorithm is then used to recognize detected faces with a known database.
         </p>
         <img src="https://github.com/macoyulloa/checkingFace/raw/master/faceRecord.gif" alt="check-image">
     </div>
     <div class="about" id="about">
         <h1>About</h1>
         <div class="members">
-            <div><h2>Martin Peña</h2><a href="https://github.com/andres-martin">andres-martin</a></div>
-            <div><h2>Andres Lopez</h2><a href="https://github.com/klupzor">klupzor</a></div>
-            <div><h2>Maria Alejandra Coy</h2><a href="https://github.com/macoyulloa">macoyulloa</a></div>
+            <div>
+                <h2>Martin Peña</h2><a href="https://github.com/andres-martin">andres-martin</a>
+            </div>
+            <div>
+                <h2>Andres Lopez</h2><a href="https://github.com/klupzor">klupzor</a>
+            </div>
+            <div>
+                <h2>Maria Alejandra Coy</h2><a href="https://github.com/macoyulloa">macoyulloa</a>
+            </div>
         </div>
     </div>
 
@@ -59,21 +74,22 @@
         <form class="signupForm" method="POST" action="">
             <h2>Sign Up</h2>
             <ul class="noBullet">
-            <li>
-                <input type="text" class="inputFields" name="name" placeholder="Username" required/>
-            </li>
-            <li>
-                <input type="password" class="inputFields" name="password" placeholder="Password" required/>
-            </li>
-            <li>
-                <input type="email" class="inputFields" name="email" placeholder="Email" required/>
-            </li>
-            <li id="center-btn">
-                <input id="join-btn" value="Submit User" onclick="sendData()">
-            </li>
+                <li>
+                    <input type="text" class="inputFields" name="name" placeholder="Username" required />
+                </li>
+                <li>
+                    <input type="password" class="inputFields" name="password" placeholder="Password" required />
+                </li>
+                <li>
+                    <input type="email" class="inputFields" name="email" placeholder="Email" required />
+                </li>
+                <li id="center-btn">
+                    <input id="join-btn" value="Submit User" onclick="sendData()">
+                </li>
             </ul>
         </form>
     </div>
     <script src="./src/javaScript.js"></script>
 </body>
+
 </html>
